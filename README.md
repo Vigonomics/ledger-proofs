@@ -8,7 +8,7 @@ posted in the last closed UTC hour, and once a day it stamps the day with OpenTi
 * `daily/main/YYYY/YYYY-MM-DD.json`: the day's hourly files (with their SHA-256), a Merkle root over the hourly roots
   and `day_root` (SHA-256 of the day's row hashes joined by newlines, as in the ledger's daily digest).
 * `daily/main/YYYY/YYYY-MM-DD.json.ots`: an [OpenTimestamps](https://opentimestamps.org) proof of that manifest,
-  upgraded to a Bitcoin attestation once confirmed (`ots verify <file>.ots`).
+  upgraded to a Bitcoin attestation once confirmed (usually within hours; see step 5 below to verify it).
 * `heartbeat/main.json`: rewritten by every hourly run (at :07 UTC), with or without picks, so a quiet hour can be
   told from a stopped publisher. Fields: `format` (`vig-anchor-heartbeat-v1`), `chain`, `hour` (the last closed UTC
   hour), `n_picks_hour` (picks created in that hour, 0 allowed), `chain_head_seq` + `chain_head` (the newest row hash
@@ -40,9 +40,17 @@ and, for the last step, the [OpenTimestamps client](https://github.com/opentimes
    `prev_hash` must be the `row_hash` of seq - 1 (`ledger_chain_hashes` with `p_after_seq = seq - 2`).
 4. **Find it in the hour file.** Open `roots/main/YYYY/MM/DD/YYYY-MM-DDTHHZ.json` for the UTC hour of `created_at`:
    `row_hash` must be in `row_hashes`, and the RFC 6962 Merkle root of that list must equal `merkle_root`.
-5. **Check the timestamp.** The day's `daily/main/YYYY/YYYY-MM-DD.json` lists that hour file with its SHA-256;
-   `ots verify daily/main/YYYY/YYYY-MM-DD.json.ots` proves the manifest existed at the Bitcoin block time, so the
-   pick (posted before its game started) can't have been written later.
+5. **Check the timestamp.** The day's `daily/main/YYYY/YYYY-MM-DD.json` must list that hour file with the SHA-256
+   of its bytes (`sha256sum` the hour file). Then check the manifest's proof, either way:
+   * with a Bitcoin node: `ots verify daily/main/YYYY/YYYY-MM-DD.json.ots` must print `Success! Bitcoin block
+     <height> attests existence as of <time>`. Without a node the client only prints `Could not connect to Bitcoin
+     node` (and still exits 0), which is not a verification;
+   * without a node: `ots --no-bitcoin verify daily/main/YYYY/YYYY-MM-DD.json.ots` checks the proof is for this
+     manifest (`File does not match original!` otherwise) and prints `check that Bitcoin block <height> has merkleroot
+     <hex>`; look that block up on any explorer (e.g. https://blockstream.info/api/block-height/<height>, then
+     `/api/block/<hash>`) and compare `merkle_root`. The web verifier at https://opentimestamps.org does the same.
+   This proves the manifest, so every row hash in it, existed at that block's time: a pick posted before its game
+   started can't have been written later.
 
 Or let the ledger do all of it: `python -m vig_ledger verify --anchors` (in the Vigonomics repo, `ledger/`)
 recomputes every hash, root, manifest and heartbeat field from the public feed and this repo.
