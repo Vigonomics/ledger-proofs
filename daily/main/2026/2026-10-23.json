@@ -1,0 +1,49 @@
+{
+ "chain": "main",
+ "chain_head": "3481c69ea591d460045a55164ae93fd8d53def8bfc260909989c4ab15050a4eb",
+ "day": "2026-10-23",
+ "day_root": "92b451fab5032116aaa4e8c98849f26b901fb50c256ec367eefecd4047579b01",
+ "first_seq": 10,
+ "format": "vig-anchor-day-v1",
+ "hours": [
+  {
+   "file": "roots/main/2026/10/23/2026-10-23T00Z.json",
+   "hour": "2026-10-23T00:00:00Z",
+   "merkle_root": "875e73f68fde9c376bd13d878b3c3dd2a96dce63bc5c4b1c8b5ec75e1af8eb57",
+   "sha256": "fff7728ae0d6cf158172be32d402a86425c1abe104dc12f7bf55b6e6e2857e7c"
+  },
+  {
+   "file": "roots/main/2026/10/23/2026-10-23T01Z.json",
+   "hour": "2026-10-23T01:00:00Z",
+   "merkle_root": "3a19383e496f7939511b3db23cf1635619763090572e524958f555f7f84b7ec2",
+   "sha256": "8f68acddeb225045a8e33df64e6f1f09fc7b36788e5f14facdbab5935aa50426"
+  },
+  {
+   "file": "roots/main/2026/10/23/2026-10-23T08Z.json",
+   "hour": "2026-10-23T08:00:00Z",
+   "merkle_root": "774d9dbe01c1f6347d7d50b0beac78ba11d5b0bd0de03b1629e473478727fd8a",
+   "sha256": "4c3acb47e1366dfa9bb93b4c678013e2f36bbc530aa668140254a6db4cf635c8"
+  },
+  {
+   "file": "roots/main/2026/10/23/2026-10-23T11Z.json",
+   "hour": "2026-10-23T11:00:00Z",
+   "merkle_root": "35e271ed16215009550b4de1c189159cfae4d4bdef316a4619a518820916b327",
+   "sha256": "3b477b8de602a1fcb70b7c9c8ae69ffa0513e1e1ecc6c3d5e4e95ce0ddb043c8"
+  },
+  {
+   "file": "roots/main/2026/10/23/2026-10-23T12Z.json",
+   "hour": "2026-10-23T12:00:00Z",
+   "merkle_root": "95fef5ce5fad2fb24aec53a689b49de80b703813a46da0736d2161f7ceafef82",
+   "sha256": "a039d16be785e463f7495ff50d0921dbab6085440b07da55d5c36ed93af930ed"
+  },
+  {
+   "file": "roots/main/2026/10/23/2026-10-23T13Z.json",
+   "hour": "2026-10-23T13:00:00Z",
+   "merkle_root": "fc115366b72ab2818f248b18c531937aebb20febc08b574249c726483959725c",
+   "sha256": "e6d5617087107d85470f7d4ff28e4efffce0a1ca8a1caead8e292ad96e07d0ae"
+  }
+ ],
+ "hours_merkle_root": "d4cda1dbe240554b838d2fd1fa035476c06b0584ced1b919081e06dff87a7ff4",
+ "last_seq": 24,
+ "n_picks": 15
+}
