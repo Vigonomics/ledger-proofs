@@ -1,0 +1,49 @@
+{
+ "chain": "main",
+ "chain_head": "62d1faa73da001733172daa94ff5bdaf5e841984e8fd471b96c684e3ef9c5a14",
+ "day": "2026-10-25",
+ "day_root": "84d47f92ef130baf4aababf6d7a8816773a77a04d5217b654d8c442fa0c648b8",
+ "first_seq": 45,
+ "format": "vig-anchor-day-v1",
+ "hours": [
+  {
+   "file": "roots/main/2026/10/25/2026-10-25T00Z.json",
+   "hour": "2026-10-25T00:00:00Z",
+   "merkle_root": "08c9b6aaafc9b6b122552986b02a618553d9bfd95be863c01e1c31c9dd943e68",
+   "sha256": "6e1fdc037eedf77b371e3b7424d31d239d13463015f7c26e0781ddf0393b587a"
+  },
+  {
+   "file": "roots/main/2026/10/25/2026-10-25T01Z.json",
+   "hour": "2026-10-25T01:00:00Z",
+   "merkle_root": "603b8e82cd218b20f94ff8d39f64d94cb415ce7466d1b2372f5763637be874f1",
+   "sha256": "ffb4dd6c76af1e94e9c2d1d7c70af9445ba5d59952ccbb4fe1f54986ff8d48dc"
+  },
+  {
+   "file": "roots/main/2026/10/25/2026-10-25T11Z.json",
+   "hour": "2026-10-25T11:00:00Z",
+   "merkle_root": "74f9ee8510cca9fa61bed6a06c2f5b7658d5f8fa780b65566b825bcdd8c9dda3",
+   "sha256": "5d356177b3981323e55880806bc614b4fd7fd00d674670b3922b2092020a8ffe"
+  },
+  {
+   "file": "roots/main/2026/10/25/2026-10-25T13Z.json",
+   "hour": "2026-10-25T13:00:00Z",
+   "merkle_root": "71f28e732e22076135c36b8ae414ea80a25d53fea7318312e0196c4c4b5b984f",
+   "sha256": "5e33609624957fbf2ac829c23fe9dcf458e302ec9f14a04b59ce329c3d30037c"
+  },
+  {
+   "file": "roots/main/2026/10/25/2026-10-25T14Z.json",
+   "hour": "2026-10-25T14:00:00Z",
+   "merkle_root": "3d6ef38d83f92508d2c65fb57a03f3e6ff3331071ae0baec88e54349bd0c2177",
+   "sha256": "a082e7e2c3b4353d8b55309d228fbd7eb49c30ac0bfa3f106b88b018065594dc"
+  },
+  {
+   "file": "roots/main/2026/10/25/2026-10-25T22Z.json",
+   "hour": "2026-10-25T22:00:00Z",
+   "merkle_root": "fb68830dea2d673fa0b7ed14b52ee0c6c023256ba3abe6d4df6d5ba539c9ba0b",
+   "sha256": "d41cc81c3844a5aba985c393afbb86d2802bcf7ac536b5277ceebcbffa549a04"
+  }
+ ],
+ "hours_merkle_root": "b0197145e9097564167271d2d26fb7c9581158844e843aac5f2ba322aa90c2db",
+ "last_seq": 58,
+ "n_picks": 14
+}
