@@ -1,0 +1,49 @@
+{
+ "chain": "main",
+ "chain_head": "8ea6751110a8e200d2c8ad3ecd1d0ed23325fe41ca33295b4a607e55d8c017d7",
+ "day": "2026-10-26",
+ "day_root": "26f40b2163c18a29cbed82aa8d34872f885e27ba35840fc9615f45712d740ad9",
+ "first_seq": 59,
+ "format": "vig-anchor-day-v1",
+ "hours": [
+  {
+   "file": "roots/main/2026/10/26/2026-10-26T00Z.json",
+   "hour": "2026-10-26T00:00:00Z",
+   "merkle_root": "0010eaee2a3f3ef50793f750b303274fc8e9e30c9da991429266c54dbf836d9a",
+   "sha256": "56552cc06f5d2d26ac4cbd7a81d4b28bb00d329e9c01c591924f008cd7a14b6a"
+  },
+  {
+   "file": "roots/main/2026/10/26/2026-10-26T11Z.json",
+   "hour": "2026-10-26T11:00:00Z",
+   "merkle_root": "bcfd0e365342f825c33b891cddebe48c21bd4976fc4225604cbef45441027c95",
+   "sha256": "968e132596cb6dab9d13de7e584f2d360ddb595ed54d8bb1710aa18c5eefa3dd"
+  },
+  {
+   "file": "roots/main/2026/10/26/2026-10-26T13Z.json",
+   "hour": "2026-10-26T13:00:00Z",
+   "merkle_root": "ef33b522c183379bf18c329a47fadbac4b7c319e5c3824821f33df012504689b",
+   "sha256": "1a1215001c1f5bf89c3f0ba53d2021e306ff1edb1a15f1d34423c0820f0e4e11"
+  },
+  {
+   "file": "roots/main/2026/10/26/2026-10-26T14Z.json",
+   "hour": "2026-10-26T14:00:00Z",
+   "merkle_root": "9688335c839bd876256c1aacec78388f51b291b2ffe191645e7f4a602a1bb6d5",
+   "sha256": "9ee1c31d7c1ee951e0625e9e5ab98df6dca80e050b744e48e5e6b1262fce71e1"
+  },
+  {
+   "file": "roots/main/2026/10/26/2026-10-26T17Z.json",
+   "hour": "2026-10-26T17:00:00Z",
+   "merkle_root": "d9b4e495a418355c89954557e8f4bc69ca6d7a239298d390f733dd26f673655e",
+   "sha256": "fad11f6c49a81335cad5c5c5060d280cb1625994490bdbb033516edd43524ce7"
+  },
+  {
+   "file": "roots/main/2026/10/26/2026-10-26T21Z.json",
+   "hour": "2026-10-26T21:00:00Z",
+   "merkle_root": "dec7a071dfd384abd5e83fe593fde58af94a4ba0280fe3027025039cf15d5f55",
+   "sha256": "d0959e0e9dfcf2ca5d8598ef8ec13058ed069fc1a6f2b16f3a2ba4bedd109810"
+  }
+ ],
+ "hours_merkle_root": "7b293357542301e521a7ee31c1f08e31ac2c5177be2679229816ffadadc58c10",
+ "last_seq": 71,
+ "n_picks": 13
+}
