@@ -3,8 +3,8 @@
  "chain_head": "d5d5ab0ec0ee434d13c4824d739b9f5210672b338fa18082a0b5b843781c34ba",
  "chain_head_seq": 116,
  "format": "vig-anchor-heartbeat-v1",
- "hour": "2026-10-29T03:00:00Z",
+ "hour": "2026-10-29T04:00:00Z",
  "n_picks_hour": 0,
- "published_at": "2026-10-29T04:07:57Z",
+ "published_at": "2026-10-29T05:07:14Z",
  "publisher": "vig_ledger.anchor/2"
 }
