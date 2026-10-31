@@ -1,0 +1,55 @@
+{
+ "chain": "main",
+ "chain_head": "8205d8eb53c02ee40f3e60ec011e1c5638eb4ca8d7a9bb2fd44dedb6ced1238d",
+ "day": "2026-10-30",
+ "day_root": "421b24cf0fed89f94ae3b0e920eb106e3934bb695a5da09589bf353afa763929",
+ "first_seq": 120,
+ "format": "vig-anchor-day-v1",
+ "hours": [
+  {
+   "file": "roots/main/2026/10/30/2026-10-30T00Z.json",
+   "hour": "2026-10-30T00:00:00Z",
+   "merkle_root": "018490c0d65e12daf3d78094db843b75084ec4c430e5cc55101d28716677f4ab",
+   "sha256": "baeac64039f2bc2dd896e443e75c8f4df161a54cadb5a0fbb27b7ba3730589b1"
+  },
+  {
+   "file": "roots/main/2026/10/30/2026-10-30T01Z.json",
+   "hour": "2026-10-30T01:00:00Z",
+   "merkle_root": "ff8cc4f457b2d5e8e2b02e28e2d99d49fc0efd845956bd58150fb2fd27593b34",
+   "sha256": "a9086a46e6a7a2f97e29b2ec98b78aa783f3c808239911e12d760eb3cbabcc03"
+  },
+  {
+   "file": "roots/main/2026/10/30/2026-10-30T11Z.json",
+   "hour": "2026-10-30T11:00:00Z",
+   "merkle_root": "9a1c482d47db975fafd12b63b59ae57cb879a71a8079660a3c676578ba7c8394",
+   "sha256": "ecf485bd838b58b7d28eea98bd6287ca989a89638baeef44616281bb01f0bbb6"
+  },
+  {
+   "file": "roots/main/2026/10/30/2026-10-30T12Z.json",
+   "hour": "2026-10-30T12:00:00Z",
+   "merkle_root": "24fe7f5aeea8099ca64d67e0569886bdfb07f0e8d53cdcac768d604f72cbcd62",
+   "sha256": "e9e88ef8dc7dd8a8dcb09ff3e887cb99de6084e25ce02b6d98ce75cf6605f0d5"
+  },
+  {
+   "file": "roots/main/2026/10/30/2026-10-30T13Z.json",
+   "hour": "2026-10-30T13:00:00Z",
+   "merkle_root": "3b797311349b48875ba7852c1ed228e6e6acab3ac0d6bfddb86128390cd0b3d7",
+   "sha256": "490dd3dbe5c50e4e13b1d1e4f707c8204592c3e3dfe6e151f1e7719ea44cbef5"
+  },
+  {
+   "file": "roots/main/2026/10/30/2026-10-30T14Z.json",
+   "hour": "2026-10-30T14:00:00Z",
+   "merkle_root": "25fcde8f0e67dc7f7d78045d81479c5381409dd9a4a20b71de8328d4d981c4ee",
+   "sha256": "885c5eb6bdd6155c9f40244489a366564157346f9ab94f77f70dd6f8e4c39449"
+  },
+  {
+   "file": "roots/main/2026/10/30/2026-10-30T20Z.json",
+   "hour": "2026-10-30T20:00:00Z",
+   "merkle_root": "254cfa8c9b11c7e5f6961fbd1c8ca7d51b40e9e15a2013a92bd75a6802b98060",
+   "sha256": "e7c54888aed8378db838335da41a19e1af0f0eb36aa8ce9aa287be6e7233d607"
+  }
+ ],
+ "hours_merkle_root": "9eeae631250e3e28c5a67cac1f5ddcc24f6b86a033641fcfbb675d08b821ed8e",
+ "last_seq": 134,
+ "n_picks": 15
+}
