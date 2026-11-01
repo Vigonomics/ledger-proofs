@@ -1,1 +1,2 @@
 {"chain":"main","chain_head":"f07e7f1b96eef5467609514924f8eee557745e2768f1181501ad1861f1144a05","chain_head_seq":151,"format":"vig-anchor-heartbeat-v1","hour":"2026-11-01T00:00:00Z","n_picks_hour":0,"published_at":"2026-11-01T01:07:10Z","publisher":"vig_ledger.anchor/2"}
+{"chain":"main","chain_head":"72923c8700cca9fc14f60478b242dff9afeb438f5abbc607adc373c6a61da233","chain_head_seq":152,"format":"vig-anchor-heartbeat-v1","hour":"2026-11-01T01:00:00Z","n_picks_hour":1,"published_at":"2026-11-01T02:07:16Z","publisher":"vig_ledger.anchor/2"}
