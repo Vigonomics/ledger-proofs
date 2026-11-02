@@ -1,77 +1,45 @@
 # ledger-proofs
 
-Public, append-only anchors for the Vigonomics pick ledger (main chain). Every hour the publisher seals the picks
-posted in the last closed UTC hour, and once a day it stamps the day with OpenTimestamps (anchored in Bitcoin).
+Public, append-only timestamps for the Vigonomics pick record (https://vigonomics.com/record). Every hour the picks
+recorded in the last closed UTC hour are sealed into one Merkle root, and once a day the day is stamped with
+OpenTimestamps (anchored in Bitcoin).
 
-* `roots/main/YYYY/MM/DD/YYYY-MM-DDTHHZ.json`: one file per UTC hour with picks: the hour's row hashes in sequence
-  order, their RFC 6962 SHA-256 Merkle root, and the chain head before and after the hour.
-* `daily/main/YYYY/YYYY-MM-DD.json`: the day's hourly files (with their SHA-256), a Merkle root over the hourly roots
-  and `day_root` (SHA-256 of the day's row hashes joined by newlines, as in the ledger's daily digest).
+* `roots/main/YYYY/MM/DD/YYYY-MM-DDTHHZ.json`: one file per UTC hour with picks: the hour's row hashes in order,
+  their RFC 6962 SHA-256 Merkle root, and the chain head before and after the hour.
+* `daily/main/YYYY/YYYY-MM-DD.json`: the day's hour files (with their SHA-256), a Merkle root over the hourly roots
+  and `day_root` (SHA-256 of the day's row hashes joined by newlines).
 * `daily/main/YYYY/YYYY-MM-DD.json.ots`: an [OpenTimestamps](https://opentimestamps.org) proof of that manifest,
-  upgraded to a Bitcoin attestation once confirmed (usually within hours; see step 5 below to verify it).
-* `heartbeat/main.json`: rewritten by every hourly run (at :07 UTC), with or without picks, so a quiet hour can be
-  told from a stopped publisher. Fields: `format` (`vig-anchor-heartbeat-v1`), `chain`, `hour` (the last closed UTC
-  hour), `n_picks_hour` (picks created in that hour, 0 allowed), `chain_head_seq` + `chain_head` (the newest row hash
-  created before the hour ended; 0 + 64 zeros for an empty chain), `published_at`, `publisher`. Older than about
-  3 hours = the publisher is not running.
-* `heartbeat/days/main/YYYY/YYYY-MM-DD.jsonl`: the same record, one JSON line per hourly run, appended through the
-  day; a missing hour is a run that didn't happen.
+  upgraded to a Bitcoin attestation once confirmed (usually within hours).
+* `heartbeat/main.json` and `heartbeat/days/main/YYYY/YYYY-MM-DD.jsonl`: written every hour, with or without picks,
+  so a quiet hour can be told from a missed one.
 
-How a pick is committed: `content_hash = sha256(hash_input)`, `row_hash = sha256(prev_hash + ":" + content_hash)`
-(seq 1 links to 64 zeros). Every row hash is public as soon as the pick is posted, through the hash feed
-`POST /rest/v1/rpc/ledger_chain_hashes`, including picks whose game hasn't started yet. The pick itself (teams,
-market, price) becomes public only once it is **settled** (graded final, or voided): until then only its hash is
-out. Subscribers see picks earlier, so public and subscriber record numbers can differ; both are the same chain.
-Root, manifest and proof files are never edited or deleted (the `.ots` proof is upgraded in place once); the
-heartbeat file is the only file rewritten, and the day logs only grow. Git history shows when each was published.
+Each pick is chained to the one before it: `content_hash = sha256(sealed text)` and
+`row_hash = sha256(prev_hash + ":" + content_hash)` (the first pick links to 64 zeros). Files here are never edited
+or deleted (an `.ots` proof is upgraded in place once; the heartbeat is rewritten). Git history shows when each file
+was published.
 
 ## Verify one pick
 
-You need the pick's chain `seq`, the public API URL and anon key (the same ones vigonomics.com uses), `sha256sum`
-and, for the last step, the [OpenTimestamps client](https://github.com/opentimestamps/opentimestamps-client).
+1. **Recompute its hashes.** On https://vigonomics.com/record, open the pick's *Verify* and then *How to verify*: it
+   shows the sealed text, `content_hash`, `prev_hash` and `row_hash`, and recomputes them in your browser. By hand:
+   `printf '%s' "$SEALED_TEXT" | sha256sum` must equal `content_hash`, and
+   `printf '%s' "$PREV_HASH:$CONTENT_HASH" | sha256sum` must equal `row_hash`.
+2. **Find it in the hour file.** The pick's hourly proof link (https://vigonomics.com/proof) shows the hour file for
+   the UTC hour it was recorded in: `row_hash` must be in `row_hashes`, and the RFC 6962 Merkle root of that list
+   must equal `merkle_root`.
+3. **Check the timestamp.** The day's `daily/main/YYYY/YYYY-MM-DD.json` must list that hour file with the SHA-256 of
+   its bytes. Then, with a Bitcoin node, `ots verify daily/main/YYYY/YYYY-MM-DD.json.ots` must print
+   `Success! Bitcoin block <height> attests existence as of <time>`. Without a node,
+   `ots --no-bitcoin verify daily/main/YYYY/YYYY-MM-DD.json.ots` prints the block height and Merkle root to compare
+   on any block explorer; https://opentimestamps.org does the same in a browser.
 
-1. **Get the pick and its hashes.**
-   `GET /rest/v1/record_picks?chain=eq.main&seq=eq.<seq>&select=seq,created_at,content_hash,prev_hash,row_hash,hash_input`
-   (settled picks only). For a vig-pick-v2 row `hash_input` is the exact sealed text; for an early vig-pick-v1 row it
-   is withheld (it names the strategy) and you check steps 3 to 5 only.
-2. **Recompute the content hash.** `printf '%s' "$HASH_INPUT" | sha256sum` must equal `content_hash`, and the
-   fields in `hash_input` (teams, market, line, price, book, start time, `created_at`) must match what the record shows.
-3. **Recompute the row hash.** `printf '%s' "$PREV_HASH:$CONTENT_HASH" | sha256sum` must equal `row_hash`, and
-   `prev_hash` must be the `row_hash` of seq - 1 (`ledger_chain_hashes` with `p_after_seq = seq - 2`).
-4. **Find it in the hour file.** Open `roots/main/YYYY/MM/DD/YYYY-MM-DDTHHZ.json` for the UTC hour of `created_at`:
-   `row_hash` must be in `row_hashes`, and the RFC 6962 Merkle root of that list must equal `merkle_root`.
-5. **Check the timestamp.** The day's `daily/main/YYYY/YYYY-MM-DD.json` must list that hour file with the SHA-256
-   of its bytes (`sha256sum` the hour file). Then check the manifest's proof, either way:
-   * with a Bitcoin node: `ots verify daily/main/YYYY/YYYY-MM-DD.json.ots` must print `Success! Bitcoin block
-     <height> attests existence as of <time>`. Without a node the client only prints `Could not connect to Bitcoin
-     node` (and still exits 0), which is not a verification;
-   * without a node: `ots --no-bitcoin verify daily/main/YYYY/YYYY-MM-DD.json.ots` checks the proof is for this
-     manifest (`File does not match original!` otherwise) and prints `check that Bitcoin block <height> has merkleroot
-     <hex>`; look that block up on any explorer (e.g. https://blockstream.info/api/block-height/<height>, then
-     `/api/block/<hash>`) and compare `merkle_root`. The web verifier at https://opentimestamps.org does the same.
-   This proves the manifest, so every row hash in it, existed at that block's time: a pick posted before its game
-   started can't have been written later.
+This proves every row hash in the manifest existed at that block's time: a pick recorded before its game started
+can't have been written later.
 
-Or let the ledger do all of it: `python -m vig_ledger verify --anchors` (in the Vigonomics repo, `ledger/`)
-recomputes every hash, root, manifest and heartbeat field from the public feed and this repo.
+## Strategy Board picks
 
-## Strategy Board picks (board chain)
-
-The Strategy Board's picks have their own chain (separate from the main picks) and are anchored the same way:
-`roots/board/...`, `daily/board/...` (+ `.ots`), `heartbeat/board.json` and `heartbeat/days/board/...`, same formats
-with `"chain": "board"`. The time of a Board row is when it was sealed (`sealed_at`).
-
-* Hash feed: `POST /rest/v1/rpc/strategy_shadow_seal_hashes` with `{"p_after_seq": 0, "p_limit": 1000}` returns
-  `seq, sealed_at, content_hash, prev_hash, row_hash, backfilled` for every Board seal, in order. Same formulas:
-  `content_hash = sha256(hash_input)`, `row_hash = sha256(prev_hash + ":" + content_hash)`, seq 1 links to 64 zeros.
-* Settled Board picks are public in `GET /rest/v1/record_board_picks` (with their `seq` and `row_hash`), under the
-  same rule as main picks: a pick shows once it is settled. Pro members can read every Board row's sealed text
-  (`hash_input`) in `strategy_board_seals`.
-* Seals made from migration 0072 on (`vig-shadow-v2`) also lock the Bet / No bet decision and the cutoff at the
-  moment the pick was logged. Older seals (`vig-shadow-v1`) lock the pick but not the decision, which was worked out
-  later. Rows with `backfilled = true` were sealed after they were logged ("sealed later"); that is never changed.
-* Board anchoring started after the chain itself (19 Oct 2026). Days before the first Board publish were anchored
-  late: their OpenTimestamps proof dates from that first publish, not from the day itself. The hash chain still
-  shows the order, and `sealed_at` is when each seal was made.
-
-To check a Board pick, use steps 3 to 5 above with the Board feed and `roots/board/` / `daily/board/` instead.
+Strategy Board picks have their own chain, anchored the same way: `roots/board/...`, `daily/board/...` (+ `.ots`),
+`heartbeat/board.json` and `heartbeat/days/board/...`, with `"chain": "board"`. A Board pick's time is when it was
+sealed. Board anchoring started on 19 Oct 2026: days before the first Board publish carry a timestamp from that
+first publish, not from the day itself. To check a Board pick, use steps 2 and 3 with `roots/board/` and
+`daily/board/`.
