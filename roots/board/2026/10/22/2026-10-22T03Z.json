@@ -1,0 +1,18 @@
+{
+ "chain": "board",
+ "chain_head": "7eb8113a6a12019b1e846f2d6f0ed81e7bf295b5c2393624906b81ed5aa42fea",
+ "first_seq": 5872,
+ "format": "vig-anchor-hour-v1",
+ "hour": "2026-10-22T03:00:00Z",
+ "last_seq": 5875,
+ "merkle": "rfc6962-sha256",
+ "merkle_root": "2fa6567a52953add575c09be6b82b81d89acde59eafad3e4cddb1d864dff8dd8",
+ "n_picks": 4,
+ "prev_chain_head": "28788d399761214a0d477eb93b017269acf47658d907f92b7dda2b28ae4f36c3",
+ "row_hashes": [
+  "1851c870db17701106184ab0d46ece64a7c5c9c34f931843771f8a7efa3dcf88",
+  "18cd9882411fff28b69a0dd16c08676032204df015e16bf863717b25bb38a256",
+  "b9a6b5f8c6291baf32c4a62e77c4819bd208f6803945ac681c445f922854791c",
+  "7eb8113a6a12019b1e846f2d6f0ed81e7bf295b5c2393624906b81ed5aa42fea"
+ ]
+}

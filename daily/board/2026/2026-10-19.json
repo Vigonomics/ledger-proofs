@@ -1,0 +1,49 @@
+{
+ "chain": "board",
+ "chain_head": "bfc0e313cfa55cabb74afc88ec51edc63d976e9be38c0113316596f0eec49900",
+ "day": "2026-10-19",
+ "day_root": "6e82d4191585190b1a8a75f2c646821428feed992f9a2ac60d3078e34b927820",
+ "first_seq": 1,
+ "format": "vig-anchor-day-v1",
+ "hours": [
+  {
+   "file": "roots/board/2026/10/19/2026-10-19T18Z.json",
+   "hour": "2026-10-19T18:00:00Z",
+   "merkle_root": "0457829e41281b08ea925a92706f04da38f0817a81ac864f4e746ea078b23c8a",
+   "sha256": "ef7c9baf657b786a6e9cf8d880fdd49ed7e0472552225a58dd334ebffbd3dd6c"
+  },
+  {
+   "file": "roots/board/2026/10/19/2026-10-19T19Z.json",
+   "hour": "2026-10-19T19:00:00Z",
+   "merkle_root": "9c631b256d0b9b4a2c16846d415590f5116e5496cc36f2ed1a3d541fe5d94acf",
+   "sha256": "47907f160c47ed6de84f223dd6c8f7f242d3d6556978834858b3de13c9ddd275"
+  },
+  {
+   "file": "roots/board/2026/10/19/2026-10-19T20Z.json",
+   "hour": "2026-10-19T20:00:00Z",
+   "merkle_root": "04fabf96f975987e2ee6e08279d0719f6f882fed98a7934f9bf94cdd61f474b9",
+   "sha256": "394e4f3c62083a53c6679a5b152badf3d52744640d8b2611133a5c85991e90a4"
+  },
+  {
+   "file": "roots/board/2026/10/19/2026-10-19T21Z.json",
+   "hour": "2026-10-19T21:00:00Z",
+   "merkle_root": "ce647496b752cdfff5a77fdaffad2eda4f04b70339fa855b2885f5cdd84ed53a",
+   "sha256": "7b4a561f1eb240b6ca7578fd07390d3d8b422cd342f79d5f76c8c2e4561f16f5"
+  },
+  {
+   "file": "roots/board/2026/10/19/2026-10-19T22Z.json",
+   "hour": "2026-10-19T22:00:00Z",
+   "merkle_root": "8f234552e8a0df1edf4b92c52bcd29dc15fa1f224732e2af3540ca4ed0186fac",
+   "sha256": "c6f2dea64339ec99cd2ce6197fde3993a8854586fd27fa91669b48046ada81b9"
+  },
+  {
+   "file": "roots/board/2026/10/19/2026-10-19T23Z.json",
+   "hour": "2026-10-19T23:00:00Z",
+   "merkle_root": "11f6fadee6240afad732c2de5fb68bfdae73a36f5956c1319d8332cd9750bafb",
+   "sha256": "480e8f76867c1c6c73a45733574876b3ba82ffb139de50f87f68fd3e5101ca58"
+  }
+ ],
+ "hours_merkle_root": "1986690013b8e12cab12c84ef7e302dcfe0755ca27e2c30b1a4bbb1f6c3c9859",
+ "last_seq": 1839,
+ "n_picks": 1839
+}

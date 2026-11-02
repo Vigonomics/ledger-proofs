@@ -1,0 +1,10 @@
+{
+ "chain": "board",
+ "chain_head": "7b0808615c69a5b620b8c5ef0c188ae40e55f1bcc019957b34ff01140b459a6d",
+ "chain_head_seq": 32171,
+ "format": "vig-anchor-heartbeat-v1",
+ "hour": "2026-11-02T01:00:00Z",
+ "n_picks_hour": 46,
+ "published_at": "2026-11-02T02:34:01Z",
+ "publisher": "vig_ledger.anchor/2"
+}
