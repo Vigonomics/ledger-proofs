@@ -54,3 +54,24 @@ and, for the last step, the [OpenTimestamps client](https://github.com/opentimes
 
 Or let the ledger do all of it: `python -m vig_ledger verify --anchors` (in the Vigonomics repo, `ledger/`)
 recomputes every hash, root, manifest and heartbeat field from the public feed and this repo.
+
+## Strategy Board picks (board chain)
+
+The Strategy Board's picks have their own chain (separate from the main picks) and are anchored the same way:
+`roots/board/...`, `daily/board/...` (+ `.ots`), `heartbeat/board.json` and `heartbeat/days/board/...`, same formats
+with `"chain": "board"`. The time of a Board row is when it was sealed (`sealed_at`).
+
+* Hash feed: `POST /rest/v1/rpc/strategy_shadow_seal_hashes` with `{"p_after_seq": 0, "p_limit": 1000}` returns
+  `seq, sealed_at, content_hash, prev_hash, row_hash, backfilled` for every Board seal, in order. Same formulas:
+  `content_hash = sha256(hash_input)`, `row_hash = sha256(prev_hash + ":" + content_hash)`, seq 1 links to 64 zeros.
+* Settled Board picks are public in `GET /rest/v1/record_board_picks` (with their `seq` and `row_hash`), under the
+  same rule as main picks: a pick shows once it is settled. Pro members can read every Board row's sealed text
+  (`hash_input`) in `strategy_board_seals`.
+* Seals made from migration 0072 on (`vig-shadow-v2`) also lock the Bet / No bet decision and the cutoff at the
+  moment the pick was logged. Older seals (`vig-shadow-v1`) lock the pick but not the decision, which was worked out
+  later. Rows with `backfilled = true` were sealed after they were logged ("sealed later"); that is never changed.
+* Board anchoring started after the chain itself (19 Oct 2026). Days before the first Board publish were anchored
+  late: their OpenTimestamps proof dates from that first publish, not from the day itself. The hash chain still
+  shows the order, and `sealed_at` is when each seal was made.
+
+To check a Board pick, use steps 3 to 5 above with the Board feed and `roots/board/` / `daily/board/` instead.
