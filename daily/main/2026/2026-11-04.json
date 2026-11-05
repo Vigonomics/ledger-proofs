@@ -1,0 +1,49 @@
+{
+ "chain": "main",
+ "chain_head": "eacbca8222b7c1f02816c61113bb7ef31f95a445bad142ccd839676c0d0605c4",
+ "day": "2026-11-04",
+ "day_root": "f9f90b0fb25b70e7dafcc1f4c2a55697c5c0363ca56f5a4097060b92d7731463",
+ "first_seq": 214,
+ "format": "vig-anchor-day-v1",
+ "hours": [
+  {
+   "file": "roots/main/2026/11/04/2026-11-04T00Z.json",
+   "hour": "2026-11-04T00:00:00Z",
+   "merkle_root": "54b88f41a78b268ed7cbc1c5ea0dee7b393f7cd67792c22542bb466a0185b430",
+   "sha256": "063b2287a32163512526d19c63884c158e6361af4d059eb4c25cbf75578367ea"
+  },
+  {
+   "file": "roots/main/2026/11/04/2026-11-04T12Z.json",
+   "hour": "2026-11-04T12:00:00Z",
+   "merkle_root": "85fb9eb7d09fdd52204276b438842dbf0c10a9b450fae1db080c412207ad0f95",
+   "sha256": "38b241a4305bdf39b9086ec3bb6eb4678a31b24a4575ebb1370daec20ea5b799"
+  },
+  {
+   "file": "roots/main/2026/11/04/2026-11-04T13Z.json",
+   "hour": "2026-11-04T13:00:00Z",
+   "merkle_root": "df6fba57d19b12cd4bb7b954c6eb42fce2102bcaea35bd2dbb0cded0a1548e9f",
+   "sha256": "ce1ec22cd5ca83d7ebfc6b214993c5767d5f8d7c2db7e87338410402b7ae94dc"
+  },
+  {
+   "file": "roots/main/2026/11/04/2026-11-04T21Z.json",
+   "hour": "2026-11-04T21:00:00Z",
+   "merkle_root": "195e2246e926538e5709dd55cc7cf9df529aa5efcb2548bed3abcfe67c33b38b",
+   "sha256": "ae2d606acfa1994abe1e937c7c5ddc1138151d983c722b994b69c1c5d3da43c2"
+  },
+  {
+   "file": "roots/main/2026/11/04/2026-11-04T22Z.json",
+   "hour": "2026-11-04T22:00:00Z",
+   "merkle_root": "671327ed1a34f6dafebf8672d536ec135407184ea27d914c9d03fe7a46a10f97",
+   "sha256": "92406c53435c79e50f340e49aa436e3ce88cd48a6f5dc9b5499d10a35113c596"
+  },
+  {
+   "file": "roots/main/2026/11/04/2026-11-04T23Z.json",
+   "hour": "2026-11-04T23:00:00Z",
+   "merkle_root": "ef8fde81587a0751fe19bfe7bc99d30498926a491c736e517ae574f4e98d5f26",
+   "sha256": "161a876d022bc79757d0fb1ca35038318649e3ebea7621eb56a7131d71c27038"
+  }
+ ],
+ "hours_merkle_root": "9cafd235f6f727a465a7e18fd0557e84f4e2d2242b98a83f178cbcf32f5379d3",
+ "last_seq": 230,
+ "n_picks": 17
+}
