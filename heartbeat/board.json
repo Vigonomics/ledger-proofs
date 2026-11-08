@@ -1,10 +1,10 @@
 {
  "chain": "board",
- "chain_head": "83d5054a218ac74172dd74b05c362e7bb47372b24dca335d377955845dc532ec",
- "chain_head_seq": 49942,
+ "chain_head": "3a42c8860d8443465c0695636853bc946795f47a8b1bc322075fe7e6132b80dd",
+ "chain_head_seq": 50194,
  "format": "vig-anchor-heartbeat-v1",
- "hour": "2026-11-07T22:00:00Z",
- "n_picks_hour": 229,
- "published_at": "2026-11-07T23:07:39Z",
+ "hour": "2026-11-07T23:00:00Z",
+ "n_picks_hour": 252,
+ "published_at": "2026-11-08T00:07:54Z",
  "publisher": "vig_ledger.anchor/2"
 }
