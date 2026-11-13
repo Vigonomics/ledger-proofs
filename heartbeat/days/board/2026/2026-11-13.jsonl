@@ -1,1 +1,2 @@
 {"chain":"board","chain_head":"45b7bccb1a578b7578d78ad25a40c8da86eafaa0a8008050c2e0bdae3ae603bf","chain_head_seq":64370,"format":"vig-anchor-heartbeat-v1","hour":"2026-11-13T00:00:00Z","n_picks_hour":287,"published_at":"2026-11-13T01:07:03Z","publisher":"vig_ledger.anchor/2"}
+{"chain":"board","chain_head":"1654639fcd26bc87a08b29ee2c1346c189c2b7619dcdbb418c4aa773a758abe5","chain_head_seq":64454,"format":"vig-anchor-heartbeat-v1","hour":"2026-11-13T01:00:00Z","n_picks_hour":84,"published_at":"2026-11-13T02:07:30Z","publisher":"vig_ledger.anchor/2"}
