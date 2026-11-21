@@ -1,0 +1,19 @@
+{
+ "chain": "board",
+ "chain_head": "d3c44d7f7372bcd7d9fd64fc3a86f33035ce7eaa2a2d83cef7361ac28ea8f011",
+ "day": "2026-11-20",
+ "day_root": "29eb35af3f0a891e5c5b26468c39c3833478c0f6b7ab66b871b6e037d45a80d6",
+ "first_seq": 83682,
+ "format": "vig-anchor-day-v1",
+ "hours": [
+  {
+   "file": "roots/board/2026/11/20/2026-11-20T23Z.json",
+   "hour": "2026-11-20T23:00:00Z",
+   "merkle_root": "5a02606dffc8a86cc5d66afa25c4f08b5f0e1eac06aa4db47b7ac51b6d69e28c",
+   "sha256": "b87de8513a785c6e6c0abccd70460c9fea519c8f8e05d3196fa92c69128ce362"
+  }
+ ],
+ "hours_merkle_root": "cc5f6485d984af52a4fdbf5a7b98dc1b94bad8e28550e10fd2d8835bff109cbd",
+ "last_seq": 83906,
+ "n_picks": 225
+}
