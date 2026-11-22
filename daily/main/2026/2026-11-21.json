@@ -1,0 +1,55 @@
+{
+ "chain": "main",
+ "chain_head": "b7b61d22b13baa9f37888b6578162233e3bc562691e0ba7fd2e4013c24e17c63",
+ "day": "2026-11-21",
+ "day_root": "777db350f5ba80d147cb7e51baa880c0f25319fdef7dd0d5e3cd02712eff7854",
+ "first_seq": 571,
+ "format": "vig-anchor-day-v1",
+ "hours": [
+  {
+   "file": "roots/main/2026/11/21/2026-11-21T00Z.json",
+   "hour": "2026-11-21T00:00:00Z",
+   "merkle_root": "6b54799781173d8d0703eb7eb486e6fff89cb8521b448e338fb9da7bbc224a44",
+   "sha256": "5d9d9e069a91b7330dcadac398dc692819f84d46176d027ff0dc397008d33c75"
+  },
+  {
+   "file": "roots/main/2026/11/21/2026-11-21T01Z.json",
+   "hour": "2026-11-21T01:00:00Z",
+   "merkle_root": "761605109545c611fcfd9ce21fa3025f4011efeb31bd70a1c07a7aa1306732fc",
+   "sha256": "762d0e050db60f350b8828dda2b4b871c621c64176f896e1ed4ca3c78bb4444f"
+  },
+  {
+   "file": "roots/main/2026/11/21/2026-11-21T02Z.json",
+   "hour": "2026-11-21T02:00:00Z",
+   "merkle_root": "a7b17c4c8c1f23159b934bfd9ce6f11fa81719cad2052c40b9e0b55cfe40f977",
+   "sha256": "f0def5cbc449617df5515cb5dc1efc4e4725c14ee0f738a09a35cb65284f5b36"
+  },
+  {
+   "file": "roots/main/2026/11/21/2026-11-21T04Z.json",
+   "hour": "2026-11-21T04:00:00Z",
+   "merkle_root": "a47e04539cb276179bffa3ac4bb25b75eba844be1c88f591ef3c1f6584c02af0",
+   "sha256": "fa593ea89cd46a74f7ecebd66dc9c8f825ff8388e3d858f429c5600c70b27a45"
+  },
+  {
+   "file": "roots/main/2026/11/21/2026-11-21T05Z.json",
+   "hour": "2026-11-21T05:00:00Z",
+   "merkle_root": "f2e920aa1ff7b7d0a5e7384f65e9300e99fa9a4a4efa41f0514c192639e8fd03",
+   "sha256": "505da7bc1b172216eee20286c168d158ed6b5384d62b1c40982e746f7d398fd8"
+  },
+  {
+   "file": "roots/main/2026/11/21/2026-11-21T06Z.json",
+   "hour": "2026-11-21T06:00:00Z",
+   "merkle_root": "4f6a709e0f532e6b8b6a493dd9a738e6cd3fbf86916902b86efb437f34b65d9f",
+   "sha256": "05e668edd33b7da992f33a90275f23f72b782f05ce86b8f2f29498b8112c76b7"
+  },
+  {
+   "file": "roots/main/2026/11/21/2026-11-21T07Z.json",
+   "hour": "2026-11-21T07:00:00Z",
+   "merkle_root": "e23fac5331b4745ea20faf660be65f894681d4e84c640f2438ff2704dc0484d1",
+   "sha256": "f4911d794e377d877db6a963d0eecbf874fce9e5eb2f38ee0b35bc16ad397c9a"
+  }
+ ],
+ "hours_merkle_root": "a7b1a39b78e775fe57f04931c5233da609f8169958027b313497e1d0e06340a6",
+ "last_seq": 585,
+ "n_picks": 15
+}
