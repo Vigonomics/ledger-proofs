@@ -1,0 +1,15 @@
+{
+ "chain": "main",
+ "chain_head": "cb42c71b80c1a09e6db629989f4d30d1a6ce8cf7a5edacc461abd839d2419cdd",
+ "first_seq": 674,
+ "format": "vig-anchor-hour-v1",
+ "hour": "2026-11-25T20:00:00Z",
+ "last_seq": 674,
+ "merkle": "rfc6962-sha256",
+ "merkle_root": "3a419f60d1b01822da2adedca5509a2e42e081b5755cdc475b7294da911279b4",
+ "n_picks": 1,
+ "prev_chain_head": "82b7b5538688cd8b2f4e781d0f7ee2488b9154bf3f5f1855e210d466bb34d627",
+ "row_hashes": [
+  "cb42c71b80c1a09e6db629989f4d30d1a6ce8cf7a5edacc461abd839d2419cdd"
+ ]
+}
