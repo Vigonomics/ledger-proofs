@@ -1,0 +1,157 @@
+{
+ "chain": "board",
+ "chain_head": "c42380e6de6aa0ce8968d5e27b308792622d71b2a1eff978b9e73696bec28e52",
+ "day": "2026-11-24",
+ "day_root": "b736e8a811e93793215df7cc8514f5db2dc254076b0217746293f40af40149e6",
+ "first_seq": 91575,
+ "format": "vig-anchor-day-v1",
+ "hours": [
+  {
+   "file": "roots/board/2026/11/24/2026-11-24T00Z.json",
+   "hour": "2026-11-24T00:00:00Z",
+   "merkle_root": "b7bdb092a6419c499fad63d0c83784bd9e5c3026de065e049e33007dc99bb568",
+   "sha256": "49920ba61cfd0542bf971bce9e710fb09c78f21904c733b4bd08ce2268add18f"
+  },
+  {
+   "file": "roots/board/2026/11/24/2026-11-24T01Z.json",
+   "hour": "2026-11-24T01:00:00Z",
+   "merkle_root": "ffb642b88e1996f3c21e0931919011a688da0f4f96380d76170ae9695e18f12e",
+   "sha256": "393b21e5217dff544848015ace1867c3be1aa10714c198ed46aa641dc84c20bc"
+  },
+  {
+   "file": "roots/board/2026/11/24/2026-11-24T02Z.json",
+   "hour": "2026-11-24T02:00:00Z",
+   "merkle_root": "1fff1a2952e704d1a3c29006191f7da60d7e431774b5eddb9d2b30e345a23155",
+   "sha256": "b5a62d989cdf4840a0ca1a53791555a2daab585e8c7eb5745e5cf598b6e5bab2"
+  },
+  {
+   "file": "roots/board/2026/11/24/2026-11-24T03Z.json",
+   "hour": "2026-11-24T03:00:00Z",
+   "merkle_root": "cf2f959cf4daaf7a8c0eac310178d3fed816199dc3e526b26f3e0f4da597d001",
+   "sha256": "6996f25bfb968b9f4b9ce03253e9440c74f6e6f2de142570e25471b150817dd4"
+  },
+  {
+   "file": "roots/board/2026/11/24/2026-11-24T04Z.json",
+   "hour": "2026-11-24T04:00:00Z",
+   "merkle_root": "37594fc689a01cb0c1cc6be53a74e842e71ce35372601d1f603f53b1bc941275",
+   "sha256": "2f50510178f173ce52d1a34298a755836f238ccada7081e145c81d5e40713d3e"
+  },
+  {
+   "file": "roots/board/2026/11/24/2026-11-24T05Z.json",
+   "hour": "2026-11-24T05:00:00Z",
+   "merkle_root": "3123ab1cee0bdc5c2df2f62a4eea5b4a8df7c31d1437fae5147d9856a3eee2f0",
+   "sha256": "9ae83b02660993157d496c7614a98a4aaac5d8b78e0feb85bd632873ced29032"
+  },
+  {
+   "file": "roots/board/2026/11/24/2026-11-24T06Z.json",
+   "hour": "2026-11-24T06:00:00Z",
+   "merkle_root": "29517456c3b9ab0e408ef2321f702174eea4af80e14781bc227a5cce82bcabb7",
+   "sha256": "71b1eafb86413418b826827fbd2ab6bcbef933ed998c4b23811b5197f529faee"
+  },
+  {
+   "file": "roots/board/2026/11/24/2026-11-24T07Z.json",
+   "hour": "2026-11-24T07:00:00Z",
+   "merkle_root": "3b44e5b24763f34f9c86fc9aef4e9ea85f3239dcf6905761bcf17df0aee594fe",
+   "sha256": "043830695dfc84b129425103ee5feee2fa82178e1d36afa22ddeaf8fe5e572aa"
+  },
+  {
+   "file": "roots/board/2026/11/24/2026-11-24T08Z.json",
+   "hour": "2026-11-24T08:00:00Z",
+   "merkle_root": "5335249a427a354dba9f2e34e8e38ba6e2e6b5f8d4de27767fb4590fce1a336b",
+   "sha256": "48d85dc96dabff5cfefed6d0187ea19adc7a295a640505d2bd48f417e1ce3904"
+  },
+  {
+   "file": "roots/board/2026/11/24/2026-11-24T09Z.json",
+   "hour": "2026-11-24T09:00:00Z",
+   "merkle_root": "422e2b3737ce64a66e2f9b77753485507a48356a71948ed92bb3d51702619820",
+   "sha256": "c2c99993fb3d3f327782e92a2dfdf80f582f241170c2aa24f3f33633603f4bfd"
+  },
+  {
+   "file": "roots/board/2026/11/24/2026-11-24T10Z.json",
+   "hour": "2026-11-24T10:00:00Z",
+   "merkle_root": "f796907e3236cb8d61fc1e1b70a877292c873043b5d94e799d9b6e14958d2f72",
+   "sha256": "a16724cbd435aceb7d0f331b637680d03cb743e4c02801953f107ee7555b2ae0"
+  },
+  {
+   "file": "roots/board/2026/11/24/2026-11-24T11Z.json",
+   "hour": "2026-11-24T11:00:00Z",
+   "merkle_root": "a9d08097ef29d3dff1f0a6c5b287c3c48b324f6e525fbf244ac73d0ade082777",
+   "sha256": "fa5fa608678bc6bfe3ffba795dbb2af78e9806b3f8c6576af9a284d74d2f6d47"
+  },
+  {
+   "file": "roots/board/2026/11/24/2026-11-24T12Z.json",
+   "hour": "2026-11-24T12:00:00Z",
+   "merkle_root": "99cce25ec9f3b05e9b3c1a6fc712ceb28fb88c296f07605d422a0fb7a5f7100d",
+   "sha256": "14d03e7feb2fb0d9e984d162eea745eb7d4ed13aaa3784de28ab0b0390bb34f9"
+  },
+  {
+   "file": "roots/board/2026/11/24/2026-11-24T13Z.json",
+   "hour": "2026-11-24T13:00:00Z",
+   "merkle_root": "d17762f995b5a0ccd29eb5cef9151bc8040dc53971d811c9ff71fe9c7a8b24c8",
+   "sha256": "1e45b872bfa17d4e88764166a2cb3599898743f548f63e4cea1c2f4eb431656e"
+  },
+  {
+   "file": "roots/board/2026/11/24/2026-11-24T14Z.json",
+   "hour": "2026-11-24T14:00:00Z",
+   "merkle_root": "cf7f003bf0a3651812d119c85a793aa3c6e882eb9527f90e71c0b1dd586f9824",
+   "sha256": "2e64ba1ea96bf0dab6ebda3f6ab4f855509b6f6be58662dc6aa85302561e0063"
+  },
+  {
+   "file": "roots/board/2026/11/24/2026-11-24T15Z.json",
+   "hour": "2026-11-24T15:00:00Z",
+   "merkle_root": "7eca4558d31b808c891ce8329f5c8a180777969190f1a15a56e17192b2bc1b1b",
+   "sha256": "58de52c4bdf2f1b7cd9340338d8967e2e4e095fdaf8d8256c19ee47eaf12e857"
+  },
+  {
+   "file": "roots/board/2026/11/24/2026-11-24T16Z.json",
+   "hour": "2026-11-24T16:00:00Z",
+   "merkle_root": "53855a1a2ae038b07f51c1df9bb72e08201d0c73d1484b1bfef91f618f8582f9",
+   "sha256": "30d7a0df62b1e696f6459c2cc435ad532f638b8860f909a478fe00b413d60e65"
+  },
+  {
+   "file": "roots/board/2026/11/24/2026-11-24T17Z.json",
+   "hour": "2026-11-24T17:00:00Z",
+   "merkle_root": "b2070bdc29a36e3f248239221f453463797eadf430a8af88a0a04b35abe42fc6",
+   "sha256": "999d93b5173b02f9056def95eede5bd3f4ed1266a749c830db371917cb72b181"
+  },
+  {
+   "file": "roots/board/2026/11/24/2026-11-24T18Z.json",
+   "hour": "2026-11-24T18:00:00Z",
+   "merkle_root": "fec1989f5a9c16ae07cd501960a30c6e07840bf3448e36fae5c6f6693c2f260f",
+   "sha256": "fca456e89de6a6f39d4e4d25d7f49b2c1b5187ca0180454a3fe6a2ae2e94aff8"
+  },
+  {
+   "file": "roots/board/2026/11/24/2026-11-24T19Z.json",
+   "hour": "2026-11-24T19:00:00Z",
+   "merkle_root": "e5b6a1f2dc9c36e1ad211a00fa1f3c05fdbf1af08b30296240b26eb8cac8265f",
+   "sha256": "e33aaedc0ed6da575ce55e7663d05ca95ccea1ec04115566719d06e2374068bd"
+  },
+  {
+   "file": "roots/board/2026/11/24/2026-11-24T20Z.json",
+   "hour": "2026-11-24T20:00:00Z",
+   "merkle_root": "86eb88287cc46be6e6f4113c98237646523a89e0bf40d729fcaa1ad0483c3620",
+   "sha256": "f71271bc7e7abf05e5fe2fe39f00e7479e4998ae756d227bc2ef1f7e8b442422"
+  },
+  {
+   "file": "roots/board/2026/11/24/2026-11-24T21Z.json",
+   "hour": "2026-11-24T21:00:00Z",
+   "merkle_root": "cbd8a8073890135fe683badacf71572c2ca5fa16b1237730837c501692b88572",
+   "sha256": "b4af2221bac2c4d609006f538a3c43d1e655e8891ef1ce29a5624e17c290cc72"
+  },
+  {
+   "file": "roots/board/2026/11/24/2026-11-24T22Z.json",
+   "hour": "2026-11-24T22:00:00Z",
+   "merkle_root": "e5a9c99dcc0e6947441ca1217697f161d72207deface8f3766d99237394576b4",
+   "sha256": "138456bd917ca8bb36f3de2f0f3d3fe558df1b90d08884168576cb13aad31cef"
+  },
+  {
+   "file": "roots/board/2026/11/24/2026-11-24T23Z.json",
+   "hour": "2026-11-24T23:00:00Z",
+   "merkle_root": "2690bdae6fff65b72c5dfe85271f825a5655be6fc724d39178675fd4a3cbec65",
+   "sha256": "696ef140ca8d1ef33cde8a3d8e2823c064d646913e4de52cb37675ec08e70f97"
+  }
+ ],
+ "hours_merkle_root": "44bed51c06efc6beea29cff527b653b39a28951604200dadf2b89a3765fe55fa",
+ "last_seq": 93228,
+ "n_picks": 1654
+}
